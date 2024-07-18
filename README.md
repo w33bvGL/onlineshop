@@ -46,3 +46,7 @@ npm run preview
 ```
 
 Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment#presets) for more information.
+
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
