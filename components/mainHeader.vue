@@ -1,14 +1,15 @@
 <template>
   <header class="bg-gradient-to-r from-custom-green via-custom-green-600 to-custom-green-700  text-white p-4">
     <div class="container mx-auto max-w-7xl flex justify-between items-center">
-      <div class="text-2xl font-bold"><img src="/img/Logo.png" alt="online shop logo tipo!" class="pointer-events-none">
+      <div class="text-2xl font-bold" @click="pushTo('/')"><img src="/img/Logo.png" alt="online shop logo tipo!"
+                                                                class="pointer-events-none">
       </div>
       <nav class="hidden space-x-4 lg:flex">
-        <a href="#" class="hover:underline pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none">Программы</a>
-        <a href="#" class="hover:underline pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none">Продукты</a>
-        <a href="#" class="hover:underline pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none active">Услуги</a>
-        <a href="#" class="hover:underline pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none">О нас</a>
-        <a href="#" class="hover:underline pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none">Отзывы</a>
+        <a href="#" class="pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none" id="0">Программы</a>
+        <a href="#" class="pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none" id="1">Продукты</a>
+        <a href="#" class="pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none" id="2">Услуги</a>
+        <a href="#" class="pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none" id="3">О нас</a>
+        <a href="#" class="pl-3.5 pr-3.5 pt-1.5 pb-1.5 line-clamp-1 leading-none" id="4">Отзывы</a>
       </nav>
       <div class="text-2xl bg-white p-5 rounded-2xl">
         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -27,16 +28,40 @@
   </header>
 </template>
 <script lang="ts">
-import {defineComponent} from "vue";
+import {pushTo} from '~/assets/ts/pushTo'
 
 export default defineComponent({
   name: "mainHeader",
+
+  props: {
+    active: {
+      type: Number,
+      required: true,
+    },
+  },
+
+  data() {
+    return {
+      pushTo,
+    }
+  },
+
+  mounted() {
+    this.activeHeaderNavigationLinks(this.active)
+  },
+
+  methods: {
+    activeHeaderNavigationLinks(query: Number) {
+      const currentNavItem = document.querySelector(`header nav a[id="${query}"]`);
+      currentNavItem.classList.add('active')
+    }
+  }
 });
 </script>
-<style>
+<style scoped>
 .active {
   border: 2px solid white;
-  border-radius: 15px;
+  border-radius: 10px;
   line-height: 100%;
 }
 </style>

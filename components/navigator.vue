@@ -7,7 +7,7 @@
   </div>
 </template>
 <script lang="ts">
-import {defineComponent} from "vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "navigator",
@@ -17,10 +17,6 @@ export default defineComponent({
       type: Array,
       required: true,
     },
-  },
-
-  created() {
-    console.log(this.navigateTo);
   },
 });
 </script>

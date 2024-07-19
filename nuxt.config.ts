@@ -5,13 +5,16 @@ export default defineNuxtConfig({
         '~/assets/css/root.css'
     ],
 
-    modules: ['@nuxtjs/tailwindcss'],
+    modules: ['@nuxtjs/tailwindcss', "vue3-carousel-nuxt"],
 
     devtools: {enabled: true},
 
     routeRules: {
         '/': {prerender: true},
     },
+
+    ssr: true,
+    components: true,
 
     compatibilityDate: '2024-07-18',
 });

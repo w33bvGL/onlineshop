@@ -12,6 +12,7 @@
 
 <style>
 .background {
+  min-height: 100dvh;
   background-color: #F2F2F2;
   position: relative;
 }
