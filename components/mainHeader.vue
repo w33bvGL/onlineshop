@@ -1,6 +1,6 @@
 <template>
   <header class="bg-gradient-to-r from-custom-green via-custom-green-600 to-custom-green-700  text-white p-4">
-    <div class="container mx-auto max-w-7xl flex justify-between items-center">
+    <div class="container mx-auto max-w-7xl flex justify-between items-center pr-2 pl-2">
       <div class="text-2xl font-bold cursor-pointer" @click="pushTo('/')"><img src="/img/Logo.png"
           alt="online shop logo tipo!" class="pointer-events-none">
       </div>
