@@ -18,16 +18,19 @@
   </div>
 </template>
 <script lang="ts">
-export default {
-  data() {
-    return {
-      slides: [
-        { image: 'https://mdbcdn.b-cdn.net/img/new/slides/042.webp', title: 'Slide 1' },
-        { image: 'https://mdbcdn.b-cdn.net/img/new/slides/043.webp', title: 'Slide 2' },
-        { image: 'https://mdbcdn.b-cdn.net/img/new/slides/041.webp', title: 'Slide 3' },
-        // Добавьте больше слайдов по необходимости
-      ]
+import { defineComponent } from "vue";
+
+export default defineComponent(
+  {
+    data() {
+      return {
+        slides: [
+          { image: 'https://mdbcdn.b-cdn.net/img/new/slides/042.webp', title: 'Slide 1' },
+          { image: 'https://mdbcdn.b-cdn.net/img/new/slides/043.webp', title: 'Slide 2' },
+          { image: 'https://mdbcdn.b-cdn.net/img/new/slides/041.webp', title: 'Slide 3' },
+        ]
+      }
     }
   }
-}
+);
 </script>

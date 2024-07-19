@@ -28,6 +28,7 @@
   </header>
 </template>
 <script lang="ts">
+import { defineComponent } from "vue";
 import { pushTo } from '~/assets/ts/pushTo'
 
 export default defineComponent({

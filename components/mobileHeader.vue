@@ -4,7 +4,7 @@
       <div @click="pushTo(backTo)" class="text-2xl font-bold pr-4 pl-4">
         <svg width="10" height="50" viewBox="0 0 37 69" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M32.1667 64.15L7.61323 37.1412C5.59048 34.9162 5.6719 31.4947 7.7982 29.3684L32.1667 4.99998"
-                stroke="white" stroke-width="12"/>
+            stroke="white" stroke-width="12" />
         </svg>
       </div>
       <div class="ml-6">
@@ -15,7 +15,8 @@
 </template>
 
 <script lang="ts">
-import {pushTo} from "~/assets/ts/pushTo";
+import { defineComponent } from "vue";
+import { pushTo } from "~/assets/ts/pushTo";
 
 export default defineComponent({
   name: "mobileHeader.vue",
@@ -38,6 +39,4 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>
