@@ -12,7 +12,7 @@
     <mobile-card-item-description/>
     <mobile-card-item-purchase price="1995"/>
   </main>
-  <main class="mt-6" v-else>
+  <main class="mt-6" v-if="screen === 3">
 
   </main>
 </template>
@@ -24,7 +24,7 @@ export default defineComponent({
   name: "cardItemView",
   data() {
     return {
-      screen: 'none',
+      screen: 3,
       navCard: [
         {path: '/', name: 'Главная'},
         {path: '/carditem', name: 'Мегамаркет'},
