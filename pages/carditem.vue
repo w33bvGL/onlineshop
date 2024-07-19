@@ -7,9 +7,10 @@
     <card-item-description/>
     <card-item-goods/>
   </main>
-  <main class="mt-6" v-if="screen === 0">
+  <main v-if="screen === 0">
     <mobile-card-item-title/>
     <mobile-card-item-description/>
+    <mobile-card-item-purchase price="1995"/>
   </main>
   <main class="mt-6" v-else>
 
