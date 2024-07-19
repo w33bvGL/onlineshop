@@ -2,7 +2,9 @@
   <div class="container mx-auto max-w-7xl bg-white rounded-lg relative">
     <div class="flex">
       <div class="flex-col">
-        <div class="item-title pt-7 pl-8"><h1 class="text-4xl font-semibold opacity-85">Название товара</h1></div>
+        <div class="item-title pt-7 pl-8">
+          <h1 class="text-4xl font-semibold opacity-85">Название товара</h1>
+        </div>
         <div class="flex flex-row mt-7 ml-8 mb-7">
           <div class="flex flex-col gap-4">
             <div class="card-item-images-blocks bg-gray-100 rounded-3xl"></div>
@@ -35,23 +37,29 @@
             <div class="font-bold text-4xl tracking-tight text-custom-green-800">1 955 Р</div>
             <div class="line-through text-xl tracking-tight text-custom-green-900">2 300 Р</div>
           </div>
-          <div class="flex items-center justify-between mt-3"><p>Cкидка:</p>
-            <p>15%</p></div>
-          <div class="flex items-center justify-between mt-1"><p>Цена:</p>
-            <p>2300 Р</p></div>
-          <div class="flex items-center justify-between mt-1"><p>Цена для партнера:</p>
-            <p></p></div>
+          <div class="flex items-center justify-between mt-3">
+            <p>Cкидка:</p>
+            <p>15%</p>
+          </div>
+          <div class="flex items-center justify-between mt-1">
+            <p>Цена:</p>
+            <p>2300 Р</p>
+          </div>
+          <div class="flex items-center justify-between mt-1">
+            <p>Цена для партнера:</p>
+            <p></p>
+          </div>
           <div
-              class="mt-3 text-xl bg-custom-green-1000 pt-3 pb-3 w-full rounded-3xl text-white line-clamp-1 leading-none">
+            class="mt-3 text-xl bg-custom-green-1000 pt-3 pb-3 w-full rounded-3xl text-white line-clamp-1 leading-none">
             1995 Р
           </div>
           <div
-              class="mt-3 text-xl bg-white pt-2.5 pb-2.5 w-full rounded-3xl text-custom-green-1000 line-clamp-1 leading-none border-2 border-custom-green-1000">
+            class="mt-3 text-xl bg-white pt-2.5 pb-2.5 w-full rounded-3xl text-custom-green-1000 line-clamp-1 leading-none border-2 border-custom-green-1000">
             Доставка 2 дня
           </div>
         </div>
         <button
-            class="mt-3 text-xl bg-custom-green-1000 pt-3 pb-3 w-full rounded-xl text-white line-clamp-1 leading-none">
+          class="mt-3 text-xl bg-custom-green-1000 pt-3 pb-3 w-full rounded-xl text-white line-clamp-1 leading-none">
           Купить
         </button>
       </div>
@@ -78,7 +86,7 @@
 }
 </style>
 <script lang="ts">
-import {defineComponent} from "vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "cardItemTitle",
