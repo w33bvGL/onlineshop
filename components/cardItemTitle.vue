@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto max-w-7xl bg-white rounded-lg relative">
+  <div v-show="!isMenuOpen" class="container mx-auto max-w-7xl bg-white rounded-lg relative">
     <div class="flex">
       <div class="flex-col">
         <div class="item-title pt-7 pl-8">
@@ -65,6 +65,36 @@
       </div>
     </div>
   </div>
+  <div v-show="isMenuOpen" class="bg-white rounded-3xl">
+    <carousel :items-to-show="1" class="w-full" wrapAround>
+      <slide v-for="(slide, index) in slides" :key="index">
+        <img class="w-full aspect-video" :src="slide.image" :alt="slide.title" />
+      </slide>
+      <template #addons>
+        <Pagination />
+      </template>
+    </carousel>
+    <div class="pt-2 pb-3 pr-4 pl-4">
+      <h1 class="text-3xl font-semibold opacity-85">Название Товара</h1>
+      <h3 class="text-base font-medium opacity-65">Lorem Ipsum - это текст-"рыба", часто<br> используемый в печати и
+        вэб-дизайне. Lorem<br> Ipsum является
+        стандартной
+        "рыбой" для<br> текстов на латинице с начала XVI века.</h3>
+    </div>
+  </div>
+  <div v-show="isMenuOpen" class="fixed w-full left-0 bottom-0 bg-white pt-2 pb-3 pr-4 pl-4 flex gap-3 items-center justify-between">
+    <button class="text-xl bg-custom-green-1000 pt-3 pb-3 w-full rounded-xl text-white line-clamp-1 leading-none">
+      {{ price }} P
+    </button>
+    <div
+      class="flex border-custom-green-1000 border-2 flex-row items-center justify-between rounded-xl overflow-hidden w-44">
+      <button @click="increaseCount"
+        class="w-36 text-xl bg-custom-green-1000 text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">+</button>
+      <span class=" pl-3.5 pr-3.5  text-xl">{{ itemCount }}</span>
+      <button @click="decreaseCount"
+        class="w-36 text-xl items-center bg-custom-green-1000 text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">-</button>
+    </div>
+  </div>
 </template>
 <style scoped>
 .card-item-images-blocks {
@@ -90,5 +120,46 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "cardItemTitle",
+
+  data() {
+    return {
+      isMenuOpen: false,
+      price: 1990,
+      itemCount: 1,
+      slides: [
+        { image: 'https://mdbcdn.b-cdn.net/img/new/slides/042.webp', title: 'Slide 1' },
+        { image: 'https://mdbcdn.b-cdn.net/img/new/slides/043.webp', title: 'Slide 2' },
+        { image: 'https://mdbcdn.b-cdn.net/img/new/slides/041.webp', title: 'Slide 3' },
+      ]
+    }
+  },
+
+  mounted() {
+    this.checkScreenWidth();
+    window.addEventListener('resize', this.checkScreenWidth);
+  },
+
+  methods: {
+    checkScreenWidth() {
+      if (window.innerWidth >= 1024) {
+        this.isMenuOpen = false;
+      } else {
+        this.isMenuOpen = true;
+      }
+
+      console.log(this.isMenuOpen)
+    },
+
+    increaseCount() {
+      this.itemCount++;
+    },
+
+    decreaseCount() {
+      if (this.itemCount > 1) {
+        this.itemCount--;
+      }
+    },
+  },
+
 });
 </script>

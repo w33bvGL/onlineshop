@@ -49,7 +49,7 @@
               <h5 class="font-semibold text-2xl">2 300 Р</h5>
               <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">112 SB</span>
             </div>
-            <p class="font-medium opacity-85">Lorem Ipsum - это текст-"рыба", часто<br> используемый в печати и вэб-дизайне.<br> Lorem Ipsum является стандартным видом.</p>
+            <p class="font-medium text-sm opacity-85">Lorem Ipsum - это текст-"рыба", часто<br> используемый в печати и вэб-дизайне.<br> Lorem Ipsum является стандартным видом.</p>
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@
               <h5 class="font-semibold text-2xl">2 300 Р</h5>
               <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">112 SB</span>
             </div>
-            <p class="font-medium opacity-85">Lorem Ipsum - это текст-"рыба", часто<br> используемый в печати и вэб-дизайне.<br> Lorem Ipsum является стандартным видом.</p>
+            <p class="font-medium text-sm opacity-85">Lorem Ipsum - это текст-"рыба", часто<br> используемый в печати и вэб-дизайне.<br> Lorem Ipsum является стандартным видом.</p>
           </div>
         </div>
       </div>

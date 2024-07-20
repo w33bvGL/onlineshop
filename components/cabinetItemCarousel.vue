@@ -1,5 +1,5 @@
 <template>
-  <div class="cabinet-carousel">
+  <div class="cabinet-carousel hidden lg:block">
     <div class="bg-white rounded-2xl pt-6 pb-6">
       <div v-for="(item, index) in items" :key="index" class="rounded-2xl pt-4 pb-4 pr-3 pl-3">
         <div :id="'accordion-open-' + index" data-accordion="open">
@@ -33,7 +33,6 @@
 .cabinet-carousel {
   min-width: 250px;
   max-width: 250px;
-
 }
 </style>
 
