@@ -1,5 +1,5 @@
 <template>
-  <header v-if="!isMenuOpen || !mobile" id="header" class="bg-gradient-to-r from-custom-green via-custom-green-600 to-custom-green-700  text-white p-4">
+  <header v-show="!isMenuOpen || !mobile" id="header" class="bg-gradient-to-r from-custom-green via-custom-green-600 to-custom-green-700  text-white p-4">
     <div class="container mx-auto max-w-7xl flex justify-between items-center pr-2 pl-2">
       <div class="text-2xl font-bold cursor-pointer" @click="pushTo('/')"><img src="/img/Logo.png"
           alt="online shop logo tipo!" class="pointer-events-none">
@@ -26,7 +26,7 @@
       </div>
     </div>
   </header>
-  <header v-if="isMenuOpen && mobile" class="bg-gradient-to-r from-custom-green via-custom-green-600 to-custom-green-700  text-white p-4">
+  <header v-show="isMenuOpen && mobile" class="bg-gradient-to-r from-custom-green via-custom-green-600 to-custom-green-700  text-white p-4">
     <div class="container mx-auto max-w-7xl flex justify-start items-center">
       <div @click="pushTo(backTo)" class="text-2xl font-bold pr-4 pl-4 cursor-pointer">
         <svg width="10" height="50" viewBox="0 0 37 69" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,8 @@ export default defineComponent({
     window.addEventListener('resize', this.checkScreenWidth);
   },
 
-  beforeDestroy() {
+  beforeUnmount() {
+    this.removeHeaderNavigationLinks(this.active)
     window.removeEventListener('resize', this.checkScreenWidth);
   },
 
@@ -89,6 +90,12 @@ export default defineComponent({
       const currentNavItem = document.querySelector(`#header nav a[id="${query}"]`);
       console.log(currentNavItem)
       currentNavItem.classList.add('active')
+    },
+
+    removeHeaderNavigationLinks(query: Number) {
+      const currentNavItem = document.querySelector(`#header nav a[id="${query}"]`);
+      console.log(currentNavItem)
+      currentNavItem.classList.remove('active')
     },
 
     checkScreenWidth() {

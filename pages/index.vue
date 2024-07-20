@@ -2,11 +2,13 @@
   <ul class="p-10">
     <li class="mb-5 flex gap-4 text-2xl">
       <span>1)</span>
-      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/carditem')">Карточка Товара</div>
+      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/carditem')">Карточка Товара
+      </div>
     </li>
     <li class="mb-5 flex gap-4 text-2xl">
       <span>2)</span>
-      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/cabinet')">Личный Кабинет</div>
+      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/cabinet')">Личный Кабинет
+      </div>
     </li>
     <li class="mb-5 flex gap-4 text-2xl">
       <span>3)</span>
@@ -16,10 +18,20 @@
       <span>4)</span>
       <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/catalog')">Каталог</div>
     </li>
+    <li class="mb-5 flex gap-4 text-2xl">
+      <div class="flex gap-4">
+        <span>5)</span>
+        <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/referrals')">Рефералы</div>
+      </div>
+      <div class="flex gap-4">
+        <span>5.1)</span>
+        <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/referral/tree')">Дерево</div>
+      </div>
+    </li>
   </ul>
 </template>
 <script lang="ts">
-import {pushTo} from "assets/ts/pushTo";
+import { pushTo } from "assets/ts/pushTo";
 
 export default defineComponent({
   name: 'indexView',
