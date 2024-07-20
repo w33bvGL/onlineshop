@@ -1,5 +1,5 @@
 <template>
-  <div v-show="!isMenuOpen" class="container mx-auto max-w-7xl bg-white rounded-lg relative">
+  <div v-show="!isMenuOpen" class="container mx-auto max-w-7xl bg-white rounded-2xl relative">
     <div class="flex">
       <div class="flex-col">
         <div class="item-title pt-7 pl-8">
@@ -65,7 +65,7 @@
       </div>
     </div>
   </div>
-  <div v-show="isMenuOpen" class="bg-white rounded-3xl">
+  <div v-show="isMenuOpen" class="bg-white rounded-2xl">
     <carousel :items-to-show="1" class="w-full" wrapAround>
       <slide v-for="(slide, index) in slides" :key="index">
         <img class="w-full aspect-video" :src="slide.image" :alt="slide.title" />

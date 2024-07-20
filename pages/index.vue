@@ -8,6 +8,14 @@
       <span>2)</span>
       <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/cabinet')">Личный Кабинет</div>
     </li>
+    <li class="mb-5 flex gap-4 text-2xl">
+      <span>3)</span>
+      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/cart')">Корзина</div>
+    </li>
+    <li class="mb-5 flex gap-4 text-2xl">
+      <span>4)</span>
+      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/catalog')">Каталог</div>
+    </li>
   </ul>
 </template>
 <script lang="ts">

@@ -1,6 +1,7 @@
 <template>
   <div class="cabinet-carousel hidden lg:block">
     <div class="bg-white rounded-2xl pt-6 pb-6">
+      <h2 class="text-xl pl-3 font-semibold">Cтатусы</h2>
       <div v-for="(item, index) in items" :key="index" class="rounded-2xl pt-4 pb-4 pr-3 pl-3">
         <div :id="'accordion-open-' + index" data-accordion="open">
           <h2 :id="'accordion-open-heading-' + index">

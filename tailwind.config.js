@@ -19,6 +19,7 @@ module.exports = {
                 'custom-green-800': '#85B056',
                 'custom-green-900': '#B4D293',
                 'custom-green-1000': '#9CD65D',
+                'custom-green-1100': '#86B157',
             },
             aspectRatio: {
                 '1/3': '1 / 1.3',
