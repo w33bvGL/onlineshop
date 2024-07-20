@@ -3,7 +3,7 @@
     <div class="bg-white p-6 rounded-2xl flex flex-col lg:items-start justify-center items-center">
       <div class="bg-gray-100 profile-image mb-3 rounded-full lg:rounded-2xl"><img src="" alt=""></div>
       <h1 class="font-semibold opacity-85 text-3xl">Имя Фамилия</h1>
-      <div class="mt-3 border-2 rounded-xl lg:rounded-lg pr-4 pl-4 text-red-500 border-red-500 hidden lg:block ">
+      <div class="mt-3 border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500 hidden lg:block ">
         Консультант</div>
       <p class="opacity-65 font-medium text-lg text-center lg:text-start cabinet-item-profile-description hidden lg:block">Lorem Ipsum - это текст-"рыба", часто
         используемый в печати и вэб-дизайне.</p>

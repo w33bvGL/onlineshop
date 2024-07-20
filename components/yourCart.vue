@@ -91,7 +91,7 @@
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .cabinet-item-image-container {
   width: 105px;
   height: 105px;
