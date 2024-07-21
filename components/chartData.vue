@@ -2,7 +2,7 @@
   <div class="bg-white w-full rounded-2xl p-6">
     <div class="flex justify-between items-start md:items-center flex-col md:flex-row">
       <h1 class="font-semibold opacity-85 text-3xl text-custom-green-1100 text-nowrap mb-5 md:mb-0">
-        Мои рефералы</h1>
+        Реферальная ссылка</h1>
       <button
         class="flex justify-center gap-3 text-xl w-full md:w-auto bg-white pt-2.5 pb-2.5 pr-4 pl-4 rounded-3xl text-custom-green-1000 line-clamp-1 leading-none border-2 border-custom-green-1000">
         <p class="text">https://ref.dawd[paццвфвфцвфцв</p>
@@ -26,7 +26,30 @@
       </button>
     </div>
   </div>
+  <div>
+    <div class="lg:hidden flex justify-end">
+      <button class="text-xl bg-custom-green-1000 pt-3 pb-3 pl-3 pr-3 rounded-xl text-black line-clamp-1 leading-none">
+        <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 487.3 487.3" xml:space="preserve">
+          <g>
+            <g>
+              <path d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1
+			C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1
+			c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4
+			s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8
+			c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z
+			 M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8
+			C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8
+			C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7
+			C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z" />
+            </g>
+          </g>
+        </svg>
+      </button>
+    </div>
+  </div>
   <div class="w-full overflow-auto">
+
     <div class="tree">
       <ul>
         <li>
@@ -46,15 +69,16 @@
             <li>
               <a href="#" class="bg-white">
                 <div class="flex text-start gap-3 pt-4 pb-4 pr-2 pl-2 items-center">
-              <div class=" bg-gray-100 w-20 h-20 rounded-full"><img src="" alt=""></div>
-              <div>
-                <h3 class="opacity-85 font-semibold text-xl mb-1">Имя ползователя</h3>
-                <div class="flex gap-2">
-                  <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">Амбасадор</div>
-                  <span class="text-sm bg-red-500 pr-2 pt-1 pb-1 pl-2 text-white rounded-lg hidden md:block">2</span>
+                  <div class=" bg-gray-100 w-20 h-20 rounded-full"><img src="" alt=""></div>
+                  <div>
+                    <h3 class="opacity-85 font-semibold text-xl mb-1">Имя ползователя</h3>
+                    <div class="flex gap-2">
+                      <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">Амбасадор</div>
+                      <span
+                        class="text-sm bg-red-500 pr-2 pt-1 pb-1 pl-2 text-white rounded-lg hidden md:block">2</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
               </a>
               <ul>
                 <li>
@@ -76,15 +100,16 @@
             <li>
               <a href="#" class="bg-white">
                 <div class="flex text-start gap-3 pt-4 pb-4 pr-2 pl-2 items-center">
-              <div class=" bg-gray-100 w-20 h-20 rounded-full"><img src="" alt=""></div>
-              <div>
-                <h3 class="opacity-85 font-semibold text-xl mb-1">Имя ползователя</h3>
-                <div class="flex gap-2">
-                  <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">Амбасадор</div>
-                  <span class="text-sm bg-red-500 pr-2 pt-1 pb-1 pl-2 text-white rounded-lg hidden md:block">2</span>
+                  <div class=" bg-gray-100 w-20 h-20 rounded-full"><img src="" alt=""></div>
+                  <div>
+                    <h3 class="opacity-85 font-semibold text-xl mb-1">Имя ползователя</h3>
+                    <div class="flex gap-2">
+                      <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">Амбасадор</div>
+                      <span
+                        class="text-sm bg-red-500 pr-2 pt-1 pb-1 pl-2 text-white rounded-lg hidden md:block">2</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
               </a>
               <ul>
                 <li>
