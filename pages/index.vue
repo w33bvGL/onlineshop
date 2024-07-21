@@ -28,6 +28,14 @@
         <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/referral/tree')">Дерево</div>
       </div>
     </li>
+    <li class="mb-5 flex gap-4 text-2xl">
+      <span>6)</span>
+      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/product/editor')">Редактор Товар</div>
+    </li>
+    <li class="mb-5 flex gap-4 text-2xl">
+      <span>7)</span>
+      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/products')">Товары</div>
+    </li>
   </ul>
 </template>
 <script lang="ts">
