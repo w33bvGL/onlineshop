@@ -1,9 +1,0 @@
-@layer components {
-  .checkbox-custom {
-    @apply bg-custom-green-1000 text-custom-green-1000;
-  }
-
-  input[type="checkbox"].checkbox-custom:checked {
-    @apply bg-custom-green-1000 text-custom-green-1000;
-  }
-}
