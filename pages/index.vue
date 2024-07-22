@@ -52,6 +52,10 @@
       <span>10)</span>
       <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/deiivery/editor')">Редактор Товаров</div>
     </li>
+    <li class="mb-5 flex gap-4 text-2xl">
+      <span>11)</span>
+      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/analytics')">Аналитика</div>
+    </li>
   </ul>
 </template>
 <script lang="ts">
