@@ -1,7 +1,7 @@
 <template>
   <main-header :active="2" header-name="Название Товара" back-to="/" :mobile="1" />
   <main class="mt-4">
-    <div class="container mx-auto mb-16 max-w-7xl pr-2 pl-2 flex-col lg:flex-row">
+    <div class="container mx-auto pb-16 max-w-7xl pr-2 pl-2 flex-col lg:flex-row">
       <navigator :navigate-to="navCard" />
       <card-item-title />
       <card-item-description />
