@@ -5,11 +5,11 @@
     </div>
     <div class="mt-1 md:mt-10">
       <form class="flex flex-col md:flex-row justify-between" action="#" method="POST">
-        <div class="flex gap-1 md:gap-4 item-center">
+        <div class="flex gap-1 md:gap-4 flex-col md:flex-row item-center">
           <div class="flex flex-col items-start">
             <label for="selector" class="opacity-45 font-semibold">Выберите тип графика</label>
             <select style="height: 40px;" name="selector" id="selector"
-              class="pt-2 pb-1 outline-none border-gray-300 border-b-2 font-semibold text-lg opacity-65 pr-0 md:pr-5 lg:pr-10">
+              class="pt-2 pb-1 w-full md:w-auto outline-none border-gray-300 border-b-2 font-semibold text-lg opacity-65 pr-0 md:pr-5 lg:pr-10">
               <option value="1">Мои заработки по дням</option>
               <option value="1">Мои заработки по часам</option>
               <option value="1">Мои заработки по месяцам</option>
@@ -19,14 +19,14 @@
           <div class="flex flex-col items-start">
             <label for="startdate" class="opacity-45 font-semibold">Начало периода</label>
             <input style="height: 40px;" type="date" id="startdate"
-              class="pt-2 pb-1 outline-none border-gray-300 border-b-2 font-semibold text-lg opacity-65">
+              class="pt-2 pb-1 w-full md:w-auto outline-none border-gray-300 border-b-2 font-semibold text-lg opacity-65">
           </div>
         </div>
-        <div class="flex gap-1 md:gap-4 item-center mt-3 md:mt-0">
+        <div class="flex gap-1 md:gap-4 flex-col md:flex-row item-center mt-3 md:mt-0">
           <div class="flex flex-col items-start">
             <label for="startdate" class="opacity-45 font-semibold">Конец периода</label>
             <input style="height: 40px;" type="date" id="startdate"
-              class="pt-2 pb-1 outline-none border-gray-300 border-b-2 font-semibold text-lg opacity-65">
+              class="pt-2 pb-1 outline-none w-full md:w-auto border-gray-300 border-b-2 font-semibold text-lg opacity-65">
           </div>
           <button
             class="w-full md:w-auto mt-3 text-xl bg-custom-green-1000 pt-4 pb-4 pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">Показать</button>
