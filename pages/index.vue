@@ -48,6 +48,10 @@
       <span>9)</span>
       <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/user/editor')">Редактор Ползователя</div>
     </li>
+    <li class="mb-5 flex gap-4 text-2xl">
+      <span>10)</span>
+      <div class="text-custom-green-1000 hover:underline cursor-pointer" @click="pushTo('/deiivery/editor')">Редактор Товаров</div>
+    </li>
   </ul>
 </template>
 <script lang="ts">

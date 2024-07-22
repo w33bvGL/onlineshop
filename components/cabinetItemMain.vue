@@ -28,8 +28,7 @@
         </div>
       </div>
       <hr class="mt-3 mb-3">
-      <div class="flex flex-row justify-between items-center"
-        data-v-inspector="components/mobileCardItemDescription.vue:19:5">
+      <div class="flex flex-row justify-between items-center">
         <p class="text-custom-green-1000 text-xl">
           Итого:</p>
         <div class="flex flex-row items-center gap-3">
