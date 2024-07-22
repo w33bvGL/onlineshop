@@ -39,7 +39,10 @@
           <tr class="bg-transparent tet-black opacity-45 font-normal">
             <th class="p-2">Дата:</th>
             <th class="p-2">Всего заработано:</th>
-            <th class="p-2"><p class="md:block hidden">Сумма ко классике:</p><p class="block md:hidden">Сумма:</p></th>
+            <th class="p-2">
+              <p class="md:block hidden">Сумма ко классике:</p>
+              <p class="block md:hidden">Сумма:</p>
+            </th>
           </tr>
         </thead>
         <tbody class="text-black opacity-85 font-semibold">
@@ -79,10 +82,3 @@ export default defineComponent({
   name: "analyticsContainer",
 });
 </script>
-<style scoped>
-.tr-spacing::after {
-  content: '';
-  display: block;
-  height: 10px;
-}
-</style>
