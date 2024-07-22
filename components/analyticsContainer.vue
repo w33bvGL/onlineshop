@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white w-full rounded-2xl p-6">
     <div class="flex justify-between items-center text-custom-green-1100">
-      <h1 class="font-semibold opacity-85 text-3xl">Аналитика</h1 </div>
+      <h1 class="font-semibold opacity-85 text-3xl">Аналитика</h1>
     </div>
     <div class="mt-1 md:mt-10">
       <form class="flex flex-col md:flex-row justify-between" action="#" method="POST">
