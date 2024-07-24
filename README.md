@@ -50,3 +50,8 @@ Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/de
 
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
+
+обновите пакеты pnpm если установите новые пакеты они должны совпадать
+```bash
+pnpm install --no-frozen-lockfile
+```

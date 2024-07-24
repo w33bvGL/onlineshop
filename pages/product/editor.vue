@@ -10,14 +10,14 @@
         <div class="grid grid-cols-3 gap-2 md:gap-5 mt-4 lg:grid-cols-4">
           <div v-for="n in 4" class=" last:hidden lg:last:block">
             <div class="bg-gray-100 w-full aspect-square rounded-3xl">
-              <input type="file" requrired class="hidden">
-              <img src="" alt="">
+              <input type="file" required class="hidden">
+              <img :src="image" alt="">
             </div>
           </div>
         </div>
         <div class="flex justify-center items-center">
           <button
-            class="mt-3 text-xl bg-custom-red pt-4 pb-4 pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">Загрузить
+              class="mt-3 text-xl bg-custom-red pt-4 pb-4 pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">Загрузить
             изображение</button>
         </div>
       </div>
@@ -27,29 +27,28 @@
         </div>
         <div>
           <div class="w-full pt-5 pb-5 rounded-2xl bg-gray-100 outline-none relative">
-            <input type="text" required placeholder="Название товара"
-              class="w-full bg-gray-100 outline-none text-center">
-            <div class="opacity-65 absolute bottom-1 right-10 font-semibold">15/30</div>
+            <input type="text" required placeholder="Название товара" v-model="productName"
+                   class="w-full bg-gray-100 outline-none text-center">
+            <div class="opacity-65 absolute bottom-1 right-10 font-semibold">{{ productName.length }}/30</div>
           </div>
-          <div class="w-full pt-5 pb-5 rounded-2xl bg-gray-100 outline-none relative  mt-3">
-            <input type="text" required placeholder="Введите описание.."
-              class="w-full bg-gray-100 outline-none text-center h-40">
-            <div class="opacity-65 absolute bottom-1 right-10 font-semibold">0/300</div>
+          <div class="w-full pt-5 pb-5 rounded-2xl bg-gray-100 outline-none relative mt-3">
+            <input type="text" required placeholder="Введите описание.." v-model="productDescription"
+                   class="w-full bg-gray-100 outline-none text-center h-40">
+            <div class="opacity-65 absolute bottom-1 right-10 font-semibold">{{ productDescription.length }}/300</div>
           </div>
           <div class="flex gap-4 flex-row mt-4">
             <div class="w-full pt-5 pb-5 rounded-2xl bg-gray-100 outline-none relative">
-              <input type="text" required placeholder="Цена без скидки"
-                class="w-full bg-gray-100 outline-none text-center">
+              <input type="text" required placeholder="Цена без скидки" v-model="price"
+                     class="w-full bg-gray-100 outline-none text-center">
             </div>
             <div class="w-full pt-5 pb-5 rounded-2xl bg-gray-100 outline-none relative">
-              <input type="text" required placeholder="Цена со скидкой"
-                class="w-full bg-gray-100 outline-none text-center">
+              <input type="text" required placeholder="Цена со скидкой" v-model="discountedPrice"
+                     class="w-full bg-gray-100 outline-none text-center">
             </div>
           </div>
           <div>
-          <button
-            class="mt-3 text-xl bg-custom-red pt-4 pb-4 w-full pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">ЗагрСохранить изменения</button>
-        </div>
+            <button class="mt-3 text-xl bg-custom-red pt-4 pb-4 w-full pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">Сохранить изменения</button>
+          </div>
         </div>
       </div>
     </form>
@@ -57,9 +56,50 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import {defineComponent, ref, onMounted} from 'vue';
 
 export default defineComponent({
-  name: "productEditorView",
+  name: "ProductEditorView",
+  setup() {
+    const productName = ref('');
+    const productDescription = ref('');
+    const price = ref('');
+    const discountedPrice = ref('');
+    const image = ref('');
+
+    onMounted(() => {
+      const urlParams = new URLSearchParams(window.location.search);
+      productName.value = urlParams.get('name') || '';
+      productDescription.value = urlParams.get('description') || '';
+      price.value = urlParams.get('price') || '';
+      discountedPrice.value = urlParams.get('discountedPrice') || '';
+      image.value = urlParams.get('image') || '';
+    });
+
+    return {
+      productName,
+      productDescription,
+      price,
+      discountedPrice,
+      image,
+    };
+  },
 });
 </script>
+
+<style scoped>
+.skip-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.cabinet-item-image-container {
+  width: 105px;
+  height: 105px;
+  min-width: 105px;
+}
+
+.input-width {
+  width: 800px;
+}
+</style>
