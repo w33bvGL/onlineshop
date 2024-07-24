@@ -103,7 +103,7 @@ export default defineComponent({
 
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('data.json');
+        const response = await axios.get('users.json');
         users.value = response.data;
       } catch (error) {
         console.error(error);

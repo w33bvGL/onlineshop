@@ -50,13 +50,13 @@
               <p class="font-semibold">Цена для партнера:</p>
               <p>1900</p>
             </div>
-            <p class="font-semibold underline cursor-pointer hover:text-custom-green-1000 mt-1 text-left" v-show="!isPartner">Стать партнером</p>
+            <p class="underline cursor-pointer hover:text-custom-green-1000 mt-1 text-sm text-left" v-show="!isPartner">Стать партнером</p>
             <p></p>
           </div>
-          <div
-            class="mt-3 text-xl bg-custom-red pt-3 pb-3 w-full rounded-3xl text-white line-clamp-1 leading-none">
-            2 300 Р
-          </div>
+<!--          <div-->
+<!--            class="mt-3 text-xl bg-custom-red pt-3 pb-3 w-full rounded-3xl text-white line-clamp-1 leading-none">-->
+<!--            2 300 Р-->
+<!--          </div>-->
           <div
             class="mt-3 text-xl bg-white pt-2.5 pb-2.5 w-full rounded-3xl text-custom-red line-clamp-1 leading-none border-2 border-custom-red">
             Доставка 2 дня
