@@ -22,7 +22,7 @@
                :class="{ 'hidden': !isAccordionOpen[index], 'block': isAccordionOpen[index] }" class="pt-2"
                :aria-labelledby="'accordion-open-heading-' + index">
             <div>
-              <p class="font-medium opacity-65" v-html="item.content"></p>
+              <p class="font-medium text-sm opacity-65" v-html="item.content"></p>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
     <div class="bg-white rounded-2xl pt-6 pb-6 mt-3">
       <h2 class="text-xl pl-3 font-semibold">Автопрограмма</h2>
       <div class="rounded-2xl pt-4 pb-4 pr-3 pl-3">
-        я так и не понял что тут надо делать...
+        <button class="mt-3 text-lg bg-custom-green-1000 pt-3 pb-3 w-full rounded-xl text-white line-clamp-1 leading-none">подробнее</button>
       </div>
     </div>
   </div>

@@ -125,6 +125,34 @@
                 </li>
               </ul>
             </li>
+            <li>
+              <a href="#" class="bg-white">
+                <div class="flex text-start gap-3 pt-4 pb-4 pr-2 pl-2 items-center">
+                  <div class=" bg-gray-100 w-20 h-20 rounded-full"><img src="" alt=""></div>
+                  <div>
+                    <h3 class="opacity-85 font-semibold text-xl mb-1">Имя ползователя</h3>
+                    <div class="flex gap-2">
+                      <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">Амбасадор</div>
+                      <span
+                          class="text-sm bg-red-500 pr-2 pt-1 pb-1 pl-2 text-white rounded-lg hidden md:block">2</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <ul>
+                <li>
+                  <a href="#" class="bg-white">Grand Child</a>
+                  <ul>
+                    <li>
+                      <a href="#" class="bg-white">Grand Grand Child</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#" class="bg-white">Grand Child</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
