@@ -34,27 +34,31 @@
       <div class="card-item-info bg-white pt-11 pr-10 pl-10 pb-11 rounded-lg text-center flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between">
-            <div class="font-bold text-4xl tracking-tight text-custom-green-800">1 955 Р</div>
-            <div class="line-through text-xl tracking-tight text-custom-green-900">2 300 Р</div>
+            <div class="font-bold text-4xl tracking-tight text-custom-green-800">2 300 Р</div>
+            <div class="line-through text-xl tracking-tight text-custom-green-900" v-show="isPartner">2 300 Р</div>
           </div>
           <div class="flex items-center justify-between mt-3">
-            <p>Cкидка:</p>
+            <p>Скидка партнера:</p>
             <p>15%</p>
           </div>
           <div class="flex items-center justify-between mt-1">
             <p>Цена:</p>
             <p>2300 Р</p>
           </div>
-          <div class="flex items-center justify-between mt-1">
-            <p>Цена для партнера:</p>
+          <div>
+            <div class="flex items-center w-full justify-between mt-1">
+              <p class="font-semibold">Цена для партнера:</p>
+              <p>1900</p>
+            </div>
+            <p class="font-semibold underline cursor-pointer hover:text-custom-green-1000 mt-1 text-left" v-show="!isPartner">Стать партнером</p>
             <p></p>
           </div>
           <div
-            class="mt-3 text-xl bg-custom-green-1000 pt-3 pb-3 w-full rounded-3xl text-white line-clamp-1 leading-none">
-            1995 Р
+            class="mt-3 text-xl bg-custom-red pt-3 pb-3 w-full rounded-3xl text-white line-clamp-1 leading-none">
+            2 300 Р
           </div>
           <div
-            class="mt-3 text-xl bg-white pt-2.5 pb-2.5 w-full rounded-3xl text-custom-green-1000 line-clamp-1 leading-none border-2 border-custom-green-1000">
+            class="mt-3 text-xl bg-white pt-2.5 pb-2.5 w-full rounded-3xl text-custom-red line-clamp-1 leading-none border-2 border-custom-red">
             Доставка 2 дня
           </div>
         </div>
@@ -123,6 +127,7 @@ export default defineComponent({
 
   data() {
     return {
+      isPartner: false,
       isMenuOpen: false,
       price: 1990,
       itemCount: 1,
