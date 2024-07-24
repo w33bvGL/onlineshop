@@ -222,8 +222,6 @@ export default defineComponent({
         console.error('Ошибка при копировании ссылки: ', err);
       });
     },
-
-
   }
 });
 </script>
