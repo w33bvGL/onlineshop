@@ -23,7 +23,7 @@
       </div>
     </div>
     <div>
-      <div v-for="refferal in refferals" :key="refferal.id" class="cursor-pointer" @click="openModal()">
+      <div v-for="refferal in filteredReferrals" :key="refferal.id" class="cursor-pointer" @click="openModal()">
         <hr class="border-1">
         <div class="pt-4 pb-4">
           <div class="flex items-center justify-between w-full">
@@ -31,14 +31,14 @@
               <div class="cabinet-item-image-container bg-gray-100 rounded-3xl relative overflow-hidden">
                 <img :src="refferal.image" alt="">
                 <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white absolute right-0 top-0 md:hidden">
-            {{ refferal.level }}
+            {{ refferal.level }} lvl
           </span>
               </div>
               <div>
                 <div class="flex gap-2 items-center">
                   <h5 class="font-semibold text-2xl">{{ refferal.name }}</h5>
                   <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg hidden md:block">
-              {{ refferal.level }}
+              {{ refferal.level }} lvl
             </span>
                 </div>
                 <div class="flex gap-3 mt-2 flex-col justify-start items-start md:flex-row">
@@ -148,23 +148,20 @@
 </template>
 
 <script lang="ts">
-import {ref, defineComponent} from 'vue';
+import {ref, defineComponent, computed} from 'vue';
 
 export default defineComponent({
   name: 'referralsContainer',
-  data() {
-    return {
-      activeLevel: 1,
-    };
-  },
   setup() {
     const isModalOpen = ref(false);
-    const refferals = ref([
+    const activeLevel = ref();
+
+    let refferals = ref([
       {
         id: 1,
         name: 'Иван Иванов',
         image: '',
-        level: '2 lvl',
+        level: 2,
         role: 'Консультант',
         salary: '35 000 Рублей'
       },
@@ -172,7 +169,15 @@ export default defineComponent({
         id: 2,
         name: 'Петр Петров',
         image: '',
-        level: '3 lvl',
+        level: 3,
+        role: 'Менеджер',
+        salary: '40 000 Рублей'
+      },
+      {
+        id: 3,
+        name: 'Кунилина Петровна',
+        image: '',
+        level: 1,
         role: 'Менеджер',
         salary: '40 000 Рублей'
       }
@@ -185,9 +190,24 @@ export default defineComponent({
       isModalOpen.value = false;
     };
 
+    const setActiveLevel = (level: Number) => {
+      activeLevel.value = level;
+      console.log(level)
+    };
+
+    const filteredReferrals = computed(() => {
+      if (!activeLevel.value || activeLevel.value === 'all') {
+        return refferals.value;
+      }
+      return refferals.value.filter(product => product.level === activeLevel.value);
+    });
+
     return {
       isModalOpen,
       refferals,
+      activeLevel,
+      filteredReferrals,
+      setActiveLevel,
       openModal,
       closeModal,
     };
@@ -203,9 +223,7 @@ export default defineComponent({
       });
     },
 
-    setActiveLevel(level: Number) {
-      this.activeLevel = level;
-    },
+
   }
 });
 </script>
