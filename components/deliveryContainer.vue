@@ -12,7 +12,7 @@
             class="w-full bg-gray-100 outline-none text-center"
         />
       </div>
-      <span class="text-custom-green-1100 text-nowrap pl-10">{{ filteredOrders.length }} заказа</span>
+      <span class="text-custom-green-1100 text-nowrap pl-10">{{ filtered.length }} заказа</span>
     </div>
     <div
         class="input-width pt-3 border-2 border-gray-200 pb-3 rounded-2xl bg-gray-100 outline-none relative block lg:hidden">
@@ -48,12 +48,12 @@
     </div>
 
     <div>
-      <div v-for="order in filteredOrders" :key="order.id" class="cursor-pointer">
+      <div v-for="order in filtered" :key="order.id" class="cursor-pointer">
         <div class="mt-4">
           <div class="flex items-center justify-between w-full">
             <div class="flex gap-3 items-center">
               <div class="cabinet-item-image-container bg-gray-100 rounded-3xl relative overflow-hidden">
-                <img :src="order.image" alt="">
+                <img :src="order.image" :alt="order.name">
                 <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white absolute right-0 top-0 md:hidden">ID: {{
                     order.id
                   }}</span>
@@ -66,10 +66,10 @@
                     }}</span>
                 </div>
                 <div class="flex gap-3 mt-2 flex-col justify-start items-start md:flex-row">
-                  <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">{{ order.consultant }}</div>
+                  <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">{{ order.role }}</div>
                   <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">{{ order.city }}</div>
                   <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">{{ order.status }}</div>
-                  <div class="border-2 rounded-lg pr-4 pl-4 text-gray-500 bg-gray-100">{{ order.price }} Рублей</div>
+                  <div class="border-2 rounded-lg pr-4 pl-4 text-gray-500 bg-gray-100">{{ order.salary }} Рублей</div>
                 </div>
               </div>
             </div>
@@ -89,67 +89,59 @@
   </div>
 </template>
 
+
 <script lang="ts">
-import {defineComponent, ref, computed} from 'vue';
+import {computed, defineComponent, ref, onMounted} from 'vue';
+import axios from 'axios';
 
 export default defineComponent({
-  name: "DeliveryContainer",
+  name: 'UsersContainer',
   setup() {
     const searchQuery = ref('');
     const selectedFilter = ref('all');
+    const users = ref([]);
 
-    const orders = ref([
-      {
-        id: 1,
-        name: 'Иван Иванов',
-        consultant: 'Консультант',
-        city: 'Москва',
-        status: 'оплачен',
-        partnerStatus: 'активен',
-        price: '35 000',
-        image: ''
-      },
-      {
-        id: 2,
-        name: 'Петр Петров',
-        consultant: 'Консультант',
-        city: 'Санкт-Петербург',
-        status: 'не оплачен',
-        partnerStatus: 'не активен',
-        price: '40 000',
-        image: ''
-      },
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get('data.json');
+        users.value = response.data;
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    ]);
+    onMounted(() => {
+      fetchUsers();
+    });
 
     const applyFilter = (filter: string) => {
       selectedFilter.value = filter;
     };
 
-    const filteredOrders = computed(() => {
-      let filtered = orders.value;
+    const filtered = computed(() => {
+      let filtered = users.value;
 
       if (selectedFilter.value === 'city') {
-
+        // Apply city filter logic if needed
       } else if (selectedFilter.value === 'status') {
-
+        // Apply status filter logic if needed
       } else if (selectedFilter.value === 'partnerStatus') {
-
+        // Apply partnerStatus filter logic if needed
       }
 
       if (!searchQuery.value) return filtered;
       const query = searchQuery.value.toLowerCase();
-      return filtered.filter(order =>
-          order.name.toLowerCase().includes(query) ||
-          order.id.toString().includes(query)
+      return filtered.filter(user =>
+          user.name.toLowerCase().includes(query) ||
+          user.id.toString().includes(query)
       );
     });
 
     return {
       searchQuery,
-      filteredOrders,
+      selectedFilter,
       applyFilter,
-      selectedFilter
+      filtered
     };
   }
 });
