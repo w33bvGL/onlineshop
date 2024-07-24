@@ -49,7 +49,7 @@
 
     <div>
       <div v-for="order in filtered" :key="order.id" class="cursor-pointer">
-        <div class="mt-4">
+        <div class="mt-3">
           <div class="flex items-center justify-between w-full">
             <div class="flex gap-3 items-center">
               <div class="cabinet-item-image-container bg-gray-100 rounded-3xl relative overflow-hidden">
