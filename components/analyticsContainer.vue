@@ -24,61 +24,83 @@
         </div>
         <div class="flex gap-1 md:gap-4 flex-col md:flex-row item-center mt-3 md:mt-0">
           <div class="flex flex-col items-start">
-            <label for="startdate" class="opacity-45 font-semibold">Конец периода</label>
-            <input style="height: 40px;" type="date" id="startdate"
+            <label for="enddate" class="opacity-45 font-semibold">Конец периода</label>
+            <input style="height: 40px;" type="date" id="enddate"
               class="pt-2 pb-1 outline-none w-full md:w-auto border-gray-300 border-b-2 font-semibold text-lg opacity-65">
           </div>
           <button
-            class="w-full md:w-auto mt-3 text-xl bg-custom-green-1000 pt-4 pb-4 pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">Показать</button>
+            class="w-full md:w-auto mt-3 text-xl bg-custom-red pt-4 pb-4 pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">Показать</button>
         </div>
       </form>
     </div>
     <div class="w-full mt-5 mb-5 bg-white rounded-lg">
-      <table class="w-full text-left text-sm">
-        <thead>
-          <tr class="bg-transparent tet-black opacity-45 font-normal">
-            <th class="p-2">Дата:</th>
-            <th class="p-2">Всего заработано:</th>
-            <th class="p-2">
-              <p class="md:block hidden">Сумма ко классике:</p>
-              <p class="block md:hidden">Сумма:</p>
-            </th>
-          </tr>
-        </thead>
-        <tbody class="text-black opacity-85 font-semibold">
-          <tr class="bg-gray-100">
-            <td class="p-4 rounded-l-3xl">11 июль 24 год</td>
-            <td class="p-4">2 000р</td>
-            <td class="p-4 rounded-r-3xl">2 000р</td>
-          </tr>
-          <tr>
-            <td class="p-1"></td>
-          </tr>
-          <tr class="bg-gray-100">
-            <td class="p-4 rounded-l-3xl">11 июль 24 год</td>
-            <td class="p-4">2 000р</td>
-            <td class="p-4 rounded-r-3xl">2 000р</td>
-          </tr>
-          <tr>
-            <td class="p-1"></td>
-          </tr>
-          <tr class="bg-gray-100">
-            <td class="p-4 rounded-l-3xl">11 июль 24 год</td>
-            <td class="p-4">2 000р</td>
-            <td class="p-4 rounded-r-3xl">2 000р</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="flex flex-col">
+        <div class="flex font-semibold text-black opacity-45 ">
+          <div class="w-1/4">Дата:</div>
+          <div class="w-1/4">Всего заработано:</div>
+          <div class="w-1/4">
+            <p class="md:block hidden">Сумма ко классике:</p>
+            <p class="block md:hidden">Сумма:</p>
+          </div>
+          <div class="w-1/4">Примечание:</div>
+        </div>
+        <div v-for="(item, index) in orders" :key="item.date">
+          <div class="flex bg-gray-100 pt-3 pb-3 pr-2 pl-2 rounded-2xl">
+            <div class="w-1/4">{{ item.date }}</div>
+            <div class="w-1/4">{{ item.totalEarned }}</div>
+            <div class="w-1/4">{{ item.classicSum }}</div>
+            <div class="w-1/4">{{ item.note }}</div>
+          </div>
+          <div class="p-1"></div>
+        </div>
+      </div>
       <div class="mt-4 text-start text-lg font-semibold flex gap-2">
-        <p class="opacity-45">Всего заработано:</p> <span class="text-gray-500">15 000р</span>
+        <p class="opacity-45">Всего заработано:</p> <span class="text-gray-500">{{ totalEarned }}</span>
       </div>
     </div>
   </div>
 </template>
+
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, computed } from 'vue';
 
 export default defineComponent({
   name: "analyticsContainer",
+  setup() {
+    // Определяем данные напрямую
+    const orders = ref([
+      {
+        date: "11 июль 24 год",
+        totalEarned: "2 000р",
+        classicSum: "2 000р",
+        note: "Оплата за заказ №123"
+      },
+      {
+        date: "12 июль 24 год",
+        totalEarned: "2 500р",
+        classicSum: "2 500р",
+        note: "Оплата за заказ №124"
+      },
+      {
+        date: "13 июль 24 год",
+        totalEarned: "3 000р",
+        classicSum: "3 000р",
+        note: "Оплата за заказ №125"
+      }
+    ]);
+
+    const totalEarned = computed(() => {
+      return orders.value
+        .reduce((sum, item) => sum + parseInt(item.totalEarned.replace(/\D/g, '')), 0)
+        .toLocaleString() + ' р';
+    });
+
+    return {
+      orders,
+      totalEarned
+    };
+  }
 });
 </script>
+
+<style scoped></style>

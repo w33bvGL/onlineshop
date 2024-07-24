@@ -1,6 +1,5 @@
 <template>
   <div class="bg-white w-full rounded-2xl p-6">
-
     <div class="flex justify-between items-center mb-4">
       <h1 class="text-custom-green-1100 font-semibold opacity-85 text-3xl pr-10">Заказы</h1>
       <div class="input-width pt-3 border-2 border-gray-200 pb-3 rounded-2xl bg-gray-100 outline-none relative">
@@ -18,10 +17,10 @@
     <div class="sort mt-4">
       <div>
         <ul class="font-medium text-lg flex gap-4 flex-nowrap flex-row overflow-x-auto text-nowrap pb-2 pt-2 skip-scrollbar cursor-pointer">
-          <li class="border-2 pr-3 pl-3 rounded-xl">Все</li>
-          <li class="opacity-45">город</li>
-          <li class="opacity-45">статус заказа</li>
-          <li class="opacity-45">Статус партнеров</li>
+          <li :class="{ 'border-2 pr-2 pl-2 rounded-xl': selectedFilter === 'all', 'opacity-45': selectedFilter !== 'all' }" @click="applyFilter('all')">Все</li>
+          <li :class="{ 'border-2 pr-2 pl-2 rounded-xl': selectedFilter === 'city', 'opacity-45': selectedFilter !== 'city' }" @click="applyFilter('city')">город</li>
+          <li :class="{ 'border-2 pr-2 pl-2 rounded-xl': selectedFilter === 'status', 'opacity-45': selectedFilter !== 'status' }" @click="applyFilter('status')">статус заказа</li>
+          <li :class="{ 'border-2 pr-2 pl-2 rounded-xl': selectedFilter === 'partnerStatus', 'opacity-45': selectedFilter !== 'partnerStatus' }" @click="applyFilter('partnerStatus')">Статус партнеров</li>
         </ul>
       </div>
     </div>
@@ -66,23 +65,35 @@
 import { defineComponent, ref, computed } from 'vue';
 
 export default defineComponent({
-  name: "deliveryContainer",
+  name: "DeliveryContainer",
   setup() {
-    // Состояние для поиска
     const searchQuery = ref('');
+    const selectedFilter = ref('all');
 
-    // Массив заказов (пример данных)
     const orders = ref([
-      { id: 1, name: 'Иван Иванов', consultant: 'Консультант', city: 'Москва', status: 'оплачен', price: '35 000', image: '' },
-      { id: 2, name: 'Петр Петров', consultant: 'Консультант', city: 'Санкт-Петербург', status: 'не оплачен', price: '40 000', image: '' },
-      // Добавьте другие заказы
+      { id: 1, name: 'Иван Иванов', consultant: 'Консультант', city: 'Москва', status: 'оплачен', partnerStatus: 'активен', price: '35 000', image: '' },
+      { id: 2, name: 'Петр Петров', consultant: 'Консультант', city: 'Санкт-Петербург', status: 'не оплачен', partnerStatus: 'не активен', price: '40 000', image: '' },
+   
     ]);
 
-    // Фильтрация заказов
+    const applyFilter = (filter: string) => {
+      selectedFilter.value = filter;
+    };
+
     const filteredOrders = computed(() => {
-      if (!searchQuery.value) return orders.value;
+      let filtered = orders.value;
+
+      if (selectedFilter.value === 'city') {
+     
+      } else if (selectedFilter.value === 'status') {
+    
+      } else if (selectedFilter.value === 'partnerStatus') {
+     
+      }
+
+      if (!searchQuery.value) return filtered;
       const query = searchQuery.value.toLowerCase();
-      return orders.value.filter(order =>
+      return filtered.filter(order =>
           order.name.toLowerCase().includes(query) ||
           order.id.toString().includes(query)
       );
@@ -90,7 +101,9 @@ export default defineComponent({
 
     return {
       searchQuery,
-      filteredOrders
+      filteredOrders,
+      applyFilter,
+      selectedFilter
     };
   }
 });
