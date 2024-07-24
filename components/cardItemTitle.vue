@@ -92,11 +92,12 @@
     </button>
     <div
       class="flex border-custom-green-1000 border-2 flex-row items-center justify-between rounded-xl overflow-hidden w-44">
-      <button @click="increaseCount"
-        class="w-36 text-xl bg-custom-green-1000 text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">+</button>
-      <span class=" pl-3.5 pr-3.5  text-xl">{{ itemCount }}</span>
       <button @click="decreaseCount"
-        class="w-36 text-xl items-center bg-custom-green-1000 text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">-</button>
+      class="w-36 text-xl items-center bg-custom-green-1000 text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">-</button>
+      <span class=" pl-3.5 pr-3.5  text-xl">{{ itemCount }}</span>
+      <button @click="increaseCount"
+      class="w-36 text-xl bg-custom-green-1000 text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">+</button>
+
     </div>
   </div>
 </template>

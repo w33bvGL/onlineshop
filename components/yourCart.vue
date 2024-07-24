@@ -7,7 +7,7 @@
     <div class="mt-3">
       <div class="warning flex flex-col gap-4">
         <div v-for="n in 2" class="flex justify-between">
-          <div class="w-2 bg-custom-green-1000 min-h-full"></div>
+          <div class="w-2 bg-custom-red min-h-full"></div>
           <div class="w-full flex flex-col items-start pl-5 pt-3 pb-3">
             <p class="opacity-65 font-medium text-lg line-clamp-1 leading-none text-custom-green-1100">Внимание!</p>
             <p class="opacity-65 font-medium text-lg">При заказе от 7.000р будет доступна бесплатная доставка</p>
@@ -37,7 +37,7 @@
               </div>
               <div class="flex gap-3">
                 <button
-                  class="text-xl bg-custom-green-1000 pt-3 pb-3 pl-3 pr-3 rounded-xl text-white line-clamp-1 leading-none"><svg
+                  class="text-xl bg-custom-red pt-3 pb-3 pl-3 pr-3 rounded-xl text-white line-clamp-1 leading-none"><svg
                     width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <mask id="mask0_548_100" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16"
@@ -57,12 +57,12 @@
                   </svg>
                 </button>
                 <div
-                  class="flex border-custom-green-1000 border-2 flex-row items-center justify-between rounded-xl overflow-hidden w-32">
-                  <button @click="increaseCount"
-                    class="w-36 text-xl bg-custom-green-1000 text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">+</button>
-                  <span class=" pl-3.5 pr-3.5  text-xl">{{ itemCount }}</span>
+                  class="flex border-custom-red border-2 flex-row items-center justify-between rounded-xl overflow-hidden w-32">
                   <button @click="decreaseCount"
-                    class="w-36 text-xl items-center bg-custom-green-1000 text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">-</button>
+                          class="w-36 text-xl items-center bg-custom-red text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">-</button>
+                  <span class=" pl-3.5 pr-3.5  text-xl">{{ itemCount }}</span>
+                  <button @click="increaseCount"
+                          class="w-36 text-xl bg-custom-red text-white pt-2 pb-2 pr-3 pl-3 line-clamp-1 leading-none">+</button>
                 </div>
               </div>
             </div>
@@ -80,13 +80,13 @@
         </div>
         <hr>
         <div class="flex flex-row justify-between items-center">
-          <p class="text-custom-green-1000 text-xl">Цена:</p>
+          <p class="text-custom-red text-xl">Цена:</p>
           <div class="flex flex-row items-center gap-3">
             <p class="line-through text-sm text-custom-green-900">2 300 P</p>
-            <p class="text-xl text-custom-green-1000">1 955 P</p>
+            <p class="text-xl text-custom-red">1 955 P</p>
           </div>
         </div>
-        <button class="mt-3 text-xl bg-custom-green-1000 pt-4 pb-4 w-full rounded-xl text-white line-clamp-1 leading-none">Перейти к оформлению</button>
+        <button class="mt-3 text-xl bg-custom-red pt-4 pb-4 w-full rounded-xl text-white line-clamp-1 leading-none">Перейти к оформлению</button>
       </div>
     </div>
   </div>

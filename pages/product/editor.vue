@@ -17,7 +17,7 @@
         </div>
         <div class="flex justify-center items-center">
           <button
-            class="mt-3 text-xl bg-custom-green-1000 pt-4 pb-4 pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">Загрузить
+            class="mt-3 text-xl bg-custom-red pt-4 pb-4 pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">Загрузить
             изображение</button>
         </div>
       </div>
@@ -48,7 +48,7 @@
           </div>
           <div>
           <button
-            class="mt-3 text-xl bg-custom-green-1000 pt-4 pb-4 w-full pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">ЗагрСохранить изменения</button>
+            class="mt-3 text-xl bg-custom-red pt-4 pb-4 w-full pr-7 pl-7 rounded-2xl text-white line-clamp-1 leading-none">ЗагрСохранить изменения</button>
         </div>
         </div>
       </div>

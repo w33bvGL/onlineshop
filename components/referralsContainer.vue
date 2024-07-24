@@ -12,7 +12,6 @@
           </li>
           <li data-v-5bb0bdcf="">2 уровень</li>
           <li data-v-5bb0bdcf="">3 уровень</li>
-          <li data-v-5bb0bdcf="">4 уровень</li>
         </ul>
       </div>
     </div>
@@ -53,7 +52,7 @@
       <h1 class="font-semibold opacity-85 text-3xl text-custom-green-1100 text-nowrap mb-5 md:mb-0">
         Реферальная ссылка</h1>
       <button
-        class="flex justify-center gap-3 text-xl w-full md:w-auto bg-white pt-2.5 pb-2.5 pr-4 pl-4 rounded-3xl text-custom-green-1000 line-clamp-1 leading-none border-2 border-custom-green-1000">
+        class="flex justify-center gap-3 text-xl w-full md:w-auto bg-white pt-2.5 pb-2.5 pr-4 pl-4 rounded-3xl text-custom-red line-clamp-1 leading-none border-2 border-custom-red">
         <p class="text">https://ref.dawd[paццвфвфцвфцв</p>
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink">

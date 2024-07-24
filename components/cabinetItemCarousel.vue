@@ -6,25 +6,32 @@
         <div :id="'accordion-open-' + index" data-accordion="open">
           <h2 :id="'accordion-open-heading-' + index">
             <button type="button" class="flex items-center justify-between w-full p-0 font-medium rounded-t-xl gap-3"
-              @click="toggleAccordion(index)" :aria-expanded="isAccordionOpen[index]"
-              :aria-controls="'accordion-open-body-' + index">
+                    @click="toggleAccordion(index)" :aria-expanded="isAccordionOpen[index]"
+                    :aria-controls="'accordion-open-body-' + index">
               <span>{{ item.title }}</span>
               <svg :class="{ 'rotate-180': isAccordionOpen[index], 'rotate-0': !isAccordionOpen[index] }"
-                class="w-3 h-3 transition-transform duration-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 10 6">
+                   class="w-3 h-3 transition-transform duration-200" aria-hidden="true"
+                   xmlns="http://www.w3.org/2000/svg"
+                   fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 5 5 1 1 5" />
+                      d="M9 5 5 1 1 5"/>
               </svg>
             </button>
           </h2>
           <div :id="'accordion-open-body-' + index"
-            :class="{ 'hidden': !isAccordionOpen[index], 'block': isAccordionOpen[index] }" class="pt-2"
-            :aria-labelledby="'accordion-open-heading-' + index">
+               :class="{ 'hidden': !isAccordionOpen[index], 'block': isAccordionOpen[index] }" class="pt-2"
+               :aria-labelledby="'accordion-open-heading-' + index">
             <div>
               <p class="font-medium opacity-65" v-html="item.content"></p>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl pt-6 pb-6 mt-3">
+      <h2 class="text-xl pl-3 font-semibold">Автопрограмма</h2>
+      <div class="rounded-2xl pt-4 pb-4 pr-3 pl-3">
+        я так и не понял что тут надо делать...
       </div>
     </div>
   </div>
@@ -38,63 +45,35 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import {defineComponent, ref} from 'vue';
 
 export default defineComponent({
   name: 'CabinetItemCarousel',
   setup() {
     const items = ref([
       {
-        "title": "Консультант",
-        "content": "Человек подписавший контракт и выкупивший Набор Дистрибютора, консультан получает скидку на всю продукцию в прайсе 15% (постоянная скидка)"
-      },
-      {
-        "title": "Консультант PLUS",
-        "content": ""
-      },
-      {
-        "title": "Партнер",
-        "content": ""
+        "title": "Партнёр",
+        "content": "Регистрация + л/о- 5000 рублей\n"
       },
       {
         "title": "Лидер",
-        "content": ""
-      },
-      {
-        "title": "Лидер PLUS",
-        "content": ""
-      },
-      {
-        "title": "Директор",
-        "content": ""
-      },
-      {
-        "title": "Директор PLUS",
-        "content": ""
+        "content": "Групповой обьём За расчётный период- 100 000 рублей"
       },
       {
         "title": "Эксперт",
-        "content": ""
+        "content": "Групповой обьём За расчётный период- 500 000 рублей"
       },
       {
-        "title": "Эксперт PLUS",
-        "content": ""
-      },
-      {
-        "title": "Топ менеджер",
-        "content": ""
-      },
-      {
-        "title": "Топ менеджер PLUS",
-        "content": ""
+        "title": "Топ Менеджер",
+        "content": "Групповой обьём За расчётный период- 1 000 000 рублей"
       },
       {
         "title": "Амбасадор",
-        "content": ""
+        "content": "Групповой обьём За расчётный период- 2 000 000 рублей"
       },
       {
-        "title": "Амбасадор PLUS",
-        "content": ""
+        "title": "Директор",
+        "content": "Групповой обьём За расчётный период - 3 000 000 рублей"
       },
     ]);
 
