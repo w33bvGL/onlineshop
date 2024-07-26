@@ -42,7 +42,7 @@
           <p>15%</p>
         </div>
         <div class="opacity-45 font-medium text-lg flex justify-between">
-          <p>Количество баллов:</p>
+          <p>Сумма кэшбэка:</p>
           <p>224 ₽</p>
         </div>
       </div>
