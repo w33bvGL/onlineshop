@@ -43,7 +43,7 @@
         </div>
         <div class="opacity-45 font-medium text-lg flex justify-between">
           <p>Количество баллов:</p>
-          <p>224 SB</p>
+          <p>224 ₽</p>
         </div>
       </div>
       <hr class="mt-3 mb-3">
@@ -51,8 +51,8 @@
         <p class="text-custom-red text-xl">
           Итого:</p>
         <div class="flex flex-row items-center gap-3">
-          <p class="line-through text-sm text-custom-green-900">2 300 P</p>
-          <p class="text-xl text-custom-red">1 955 P</p>
+          <p class="line-through text-sm text-custom-green-900">2 300 ₽</p>
+          <p class="text-xl text-custom-red">1 955 ₽</p>
         </div>
 
       </div>
@@ -65,8 +65,8 @@
             </div>
             <div>
               <div class="flex gap-2 items-center">
-                <h5 class="font-semibold text-2xl">2 300 Р</h5>
-                <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">112 SB</span>
+                <h5 class="font-semibold text-2xl">2 300 ₽</h5>
+                <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">112 ₽</span>
               </div>
               <p class="font-medium text-sm opacity-85">Lorem Ipsum - это текст-"рыба", часто<br> используемый в печати
                 и вэб-дизайне.<br> Lorem Ipsum является стандартным видом.</p>
@@ -98,7 +98,7 @@
         </div>
         <div class="opacity-45 font-medium text-lg flex justify-between">
           <p>Количество баллов:</p>
-          <p>224 SB</p>
+          <p>224 ₽</p>
         </div>
       </div>
       <hr class="mt-3 mb-3">
@@ -107,8 +107,8 @@
         <p class="text-custom-green-1000 text-xl">
           Итого:</p>
         <div class="flex flex-row items-center gap-3">
-          <p class="line-through text-sm text-custom-green-900">2 300 P</p>
-          <p class="text-xl text-custom-green-1000">1 955 P</p>
+          <p class="line-through text-sm text-custom-green-900">2 300 ₽</p>
+          <p class="text-xl text-custom-green-1000">1 955 ₽</p>
         </div>
       </div>
       <div class="mt-4">
@@ -120,8 +120,8 @@
             </div>
             <div>
               <div class="flex gap-2 items-center">
-                <h5 class="font-semibold text-2xl">2 300 Р</h5>
-                <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">112 SB</span>
+                <h5 class="font-semibold text-2xl">2 300 ₽</h5>
+                <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">112 ₽</span>
               </div>
               <p class="font-medium text-sm opacity-85">Lorem Ipsum - это текст-"рыба", часто<br> используемый в печати
                 и вэб-дизайне.<br> Lorem Ipsum является стандартным видом.</p>

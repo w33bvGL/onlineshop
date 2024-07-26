@@ -10,7 +10,7 @@
           <div class="w-2 bg-custom-red min-h-full"></div>
           <div class="w-full flex flex-col items-start pl-5 pt-3 pb-3">
             <p class="opacity-65 font-medium text-lg line-clamp-1 leading-none text-custom-green-1100">Внимание!</p>
-            <p class="opacity-65 font-medium text-lg">При заказе от 7.000р будет доступна бесплатная доставка</p>
+            <p class="opacity-65 font-medium text-lg">При заказе от 7.000₽ будет доступна бесплатная доставка</p>
           </div>
         </div>
       </div>
@@ -27,8 +27,8 @@
                 </div>
                 <div>
                   <div class="flex gap-2 items-center">
-                    <h5 class="font-semibold text-2xl">2 300 Р</h5>
-                    <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">112 SB</span>
+                    <h5 class="font-semibold text-2xl">2 300 ₽</h5>
+                    <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">112 ₽</span>
                   </div>
                   <p class="font-medium text-sm opacity-85">Lorem Ipsum&nbsp;- это текст-"рыба", часто<br> используемый
                     в печати и вэб-дизайне.<br> Lorem Ipsum является стандартным видом.
@@ -72,18 +72,22 @@
       <div class="mt-3">
         <div class="opacity-45 font-medium text-lg flex justify-between">
           <p>Товары (2):</p>
-          <p>2300 P</p>
+          <p>2300 ₽</p>
         </div>
         <div class="opacity-45 font-medium text-lg flex justify-between">
           <p>Вознаграждение партнёра:</p>
-          <p>224 P</p>
+          <p>224 ₽</p>
+        </div>
+        <div class="opacity-45 font-medium text-lg flex justify-between">
+          <p>Скидка партнера:</p>
+          <p>15 %</p>
         </div>
         <hr>
         <div class="flex flex-row justify-between items-center">
           <p class="text-custom-red text-xl">Цена:</p>
           <div class="flex flex-row items-center gap-3">
-            <p class="line-through text-sm text-custom-green-900">2 300 P</p>
-            <p class="text-xl text-custom-red">1 955 P</p>
+            <p class="line-through text-sm text-custom-green-900">2 300 ₽</p>
+            <p class="text-xl text-custom-red">1 955 ₽</p>
           </div>
         </div>
         <button class="mt-3 text-xl bg-custom-red pt-4 pb-4 w-full rounded-xl text-white line-clamp-1 leading-none">Перейти к оформлению</button>

@@ -36,7 +36,7 @@
               <p class="text-center opacity-45 font-semibold">Скидка</p>
             </div>
             <div class="mt-2 w-full p-4 rounded-3xl bg-gray-100" style="width: 300px;">
-              <p class="text-center opacity-45 font-semibold">Баллы</p>
+              <p class="text-center opacity-45 font-semibold">Сумма кэшбэка</p>
             </div>
           </div>
         </div>

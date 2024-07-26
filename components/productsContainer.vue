@@ -35,7 +35,7 @@
             <div class="flex gap-2 items-center">
               <h5 class="font-semibold text-2xl">{{ product.name }} {{ product.price }} ₽</h5>
               <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg">{{ product.points }}
-                SB</span>
+                ₽</span>
             </div>
             <p class="font-medium text-sm opacity-85">{{ product.description }}</p>
           </div>

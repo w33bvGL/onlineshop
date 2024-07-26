@@ -34,8 +34,8 @@
       <div class="card-item-info bg-white pt-11 pr-10 pl-10 pb-11 rounded-lg text-center flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between">
-            <div class="font-bold text-4xl tracking-tight text-custom-green-800">2 300 Р</div>
-            <div class="line-through text-xl tracking-tight text-custom-green-900" v-show="isPartner">2 300 Р</div>
+            <div class="font-bold text-4xl tracking-tight text-custom-green-800">2 300 ₽</div>
+            <div class="line-through text-xl tracking-tight text-custom-green-900" v-show="isPartner">2 300 ₽</div>
           </div>
           <div class="flex items-center justify-between mt-3">
             <p>Скидка партнера:</p>
@@ -43,12 +43,12 @@
           </div>
           <div class="flex items-center justify-between mt-1">
             <p>Цена:</p>
-            <p>2300 Р</p>
+            <p>2300 ₽</p>
           </div>
           <div>
             <div class="flex items-center w-full justify-between mt-1">
               <p class="font-semibold">Цена для партнера:</p>
-              <p>1900</p>
+              <p>1900 ₽</p>
             </div>
             <p class="underline cursor-pointer hover:text-custom-green-1000 mt-1 text-sm text-left" v-show="!isPartner">Стать партнером</p>
             <p></p>
@@ -121,7 +121,7 @@
 }
 </style>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: "cardItemTitle",

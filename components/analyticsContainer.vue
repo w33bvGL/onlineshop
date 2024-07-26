@@ -67,24 +67,23 @@ import { defineComponent, ref, computed } from 'vue';
 export default defineComponent({
   name: "analyticsContainer",
   setup() {
-    // Определяем данные напрямую
     const orders = ref([
       {
         date: "11 июль 24 год",
-        totalEarned: "2 000р",
-        classicSum: "2 000р",
+        totalEarned: "2 000₽",
+        classicSum: "2 000₽",
         note: "Оплата за заказ №123"
       },
       {
         date: "12 июль 24 год",
-        totalEarned: "2 500р",
-        classicSum: "2 500р",
+        totalEarned: "2 500₽",
+        classicSum: "2 500₽",
         note: "Оплата за заказ №124"
       },
       {
         date: "13 июль 24 год",
-        totalEarned: "3 000р",
-        classicSum: "3 000р",
+        totalEarned: "3 000₽",
+        classicSum: "3 000₽",
         note: "Оплата за заказ №125"
       }
     ]);
@@ -92,7 +91,7 @@ export default defineComponent({
     const totalEarned = computed(() => {
       return orders.value
         .reduce((sum, item) => sum + parseInt(item.totalEarned.replace(/\D/g, '')), 0)
-        .toLocaleString() + ' р';
+        .toLocaleString() + ' ₽';
     });
 
     return {

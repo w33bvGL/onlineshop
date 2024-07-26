@@ -13,19 +13,19 @@
       </div>
       <div class="flex items-center justify-between mt-1">
         <p>Цена:</p>
-        <p>2300 Р</p>
+        <p>2300 ₽</p>
       </div>
       <div class="flex items-center justify-between mt-1">
         <p>Цена для партнера:</p>
-        <p>2300 Р</p>
+        <p>2300 ₽</p>
       </div>
     </div>
     <hr class="mt-3 mb-3">
     <div class="flex flex-row justify-between items-center">
       <p class="text-custom-green-1000 font-medium text-xl">Итого:</p>
       <div class="flex flex-row items-center gap-3">
-        <p class="line-through text-sm text-custom-green-900">2 300 P</p>
-        <p class="text-xl text-custom-green-1000">1 955 P</p>
+        <p class="line-through text-sm text-custom-green-900">2 300 ₽</p>
+        <p class="text-xl text-custom-green-1000">1 955 ₽</p>
       </div>
     </div>
   </div>

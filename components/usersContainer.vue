@@ -64,6 +64,9 @@
                   <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg hidden md:block">{{
                       user.level
                     }} lvl</span>
+                  <span class="text-sm bg-red-500 pr-2 pt-0.5 pb-0.5 pl-2 text-white rounded-lg ">ID: {{
+                      user.id
+                    }}</span>
                 </div>
                 <div class="flex gap-3 mt-2 flex-col justify-start items-start md:flex-row">
                   <div class="border-2 rounded-xl pr-4 pl-4 text-red-500 border-red-500">{{ user.role }}</div>
@@ -119,11 +122,11 @@ export default defineComponent({
       let filtered = users.value;
 
       if (selectedFilter.value === 'city') {
-        // Apply city filter logic if needed
+
       } else if (selectedFilter.value === 'status') {
-        // Apply status filter logic if needed
+
       } else if (selectedFilter.value === 'partnersCount') {
-        // Apply partnerStatus filter logic if needed
+
       }
 
       if (!searchQuery.value) return filtered;

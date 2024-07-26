@@ -7,7 +7,7 @@
           <img src="" alt="">
         </div>
         <div class="text-center flex flex-col items-center ">
-          <div class="text-4xl font-semibold mt-4 opacity-85">2 300 Р</div>
+          <div class="text-4xl font-semibold mt-4 opacity-85">2 300 ₽</div>
           <p class="text-center mt-1 font-medium opacity-65">Lorem Ipsum - это текст-"рыба", часто используемый в печати
             и вэб-дизайне.</p>
           <button

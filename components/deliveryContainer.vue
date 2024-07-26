@@ -122,11 +122,11 @@ export default defineComponent({
       let filtered = users.value;
 
       if (selectedFilter.value === 'city') {
-        // Apply city filter logic if needed
+
       } else if (selectedFilter.value === 'status') {
-        // Apply status filter logic if needed
+
       } else if (selectedFilter.value === 'partnerStatus') {
-        // Apply partnerStatus filter logic if needed
+
       }
 
       if (!searchQuery.value) return filtered;

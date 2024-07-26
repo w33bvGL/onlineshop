@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Черный мёд",
+    "category": "Черный мёд",
+    "price": 2300,
+    "description": "Черный мёд высокого качества.",
+    "image": "https://example.com/images/black_honey.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Косметический набор",
+    "category": "Косметика",
+    "price": 4500,
+    "description": "Набор для ухода за кожей.",
+    "image": "https://example.com/images/cosmetic_set.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Капли для глаз",
+    "category": "Капли",
+    "price": 1200,
+    "description": "Эффективные капли для глаз.",
+    "image": "https://example.com/images/eye_drops.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Свечи ароматические",
+    "category": "Свечи",
+    "price": 1500,
+    "description": "Ароматические свечи с различными ароматами.",
+    "image": "https://example.com/images/aromatic_candles.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Мёд с прополисом",
+    "category": "Черный мёд",
+    "price": 2700,
+    "description": "Мёд с добавлением прополиса.",
+    "image": "https://example.com/images/honey_propolis.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Крем для лица",
+    "category": "Косметика",
+    "price": 3200,
+    "description": "Увлажняющий крем для лица.",
+    "image": "https://example.com/images/face_cream.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Капли для носа",
+    "category": "Капли",
+    "price": 1100,
+    "description": "Капли для носа от заложенности.",
+    "image": "https://example.com/images/nose_drops.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Свечи праздничные",
+    "category": "Свечи",
+    "price": 2000,
+    "description": "Свечи для праздничного стола.",
+    "image": "https://example.com/images/party_candles.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Мёд с орехами",
+    "category": "Черный мёд",
+    "price": 3100,
+    "description": "Мёд с добавлением орехов.",
+    "image": "https://example.com/images/honey_nuts.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Сыворотка для лица",
+    "category": "Косметика",
+    "price": 3800,
+    "description": "Сыворотка для увлажнения кожи.",
+    "image": "https://example.com/images/face_serum.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Капли для ушей",
+    "category": "Капли",
+    "price": 1300,
+    "description": "Капли для ушей при воспалении.",
+    "image": "https://example.com/images/ear_drops.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Свечи декоративные",
+    "category": "Свечи",
+    "price": 1700,
+    "description": "Декоративные свечи для интерьера.",
+    "image": "https://example.com/images/decorative_candles.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Мёд липовый",
+    "category": "Черный мёд",
+    "price": 2900,
+    "description": "Липовый мёд высокого качества.",
+    "image": "https://example.com/images/lime_honey.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Тоник для лица",
+    "category": "Косметика",
+    "price": 2400,
+    "description": "Освежающий тоник для лица.",
+    "image": "https://example.com/images/face_tonic.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Капли от аллергии",
+    "category": "Капли",
+    "price": 1500,
+    "description": "Капли для снятия аллергических симптомов.",
+    "image": "https://example.com/images/allergy_drops.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Свечи для медитации",
+    "category": "Свечи",
+    "price": 2500,
+    "description": "Свечи для создания атмосферы при медитации.",
+    "image": "https://example.com/images/meditation_candles.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Мёд цветочный",
+    "category": "Черный мёд",
+    "price": 2600,
+    "description": "Цветочный мёд высокого качества.",
+    "image": "https://example.com/images/flower_honey.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Маска для лица",
+    "category": "Косметика",
+    "price": 2900,
+    "description": "Питательная маска для лица.",
+    "image": "https://example.com/images/face_mask.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Капли для роста волос",
+    "category": "Капли",
+    "price": 1700,
+    "description": "Капли для стимулирования роста волос.",
+    "image": "https://example.com/images/hair_growth_drops.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Свечи лечебные",
+    "category": "Свечи",
+    "price": 2100,
+    "description": "Лечебные свечи для здоровья.",
+    "image": "https://example.com/images/medicinal_candles.jpg"
+  }
+]
