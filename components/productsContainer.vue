@@ -64,12 +64,12 @@ export default defineComponent({
     const selectedCategory = ref<string | null>(null);
 
     const products = ref([
-      { id: 1, name: 'Товар1', category: 'electronics', price: '2 300', discountedPrice: '2 300', points: '112', description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.', image: '' },
-      { id: 2, name: 'Товар2', category: 'children', price: '1 500', discountedPrice: '2 300', points: '80', description: 'Lorem Ipsum является стандартным видом текста.', image: '' },
-      { id: 3, name: 'Товар3', category: 'books', price: '500', discountedPrice: '2 300', points: '20', description: 'Lorem Ipsum является стандартным видом текста.', image: '' },
-      { id: 4, name: 'Товар4', category: 'creativity', price: '700', discountedPrice: '2 300', points: '30', description: 'Lorem Ipsum является стандартным видом текста.', image: '' },
-      { id: 5, name: 'Товар5', category: 'home', price: '2 000', discountedPrice: '2 300', points: '100', description: 'Lorem Ipsum является стандартным видом текста.', image: '' },
-      { id: 6, name: 'Товар6', category: 'sports', price: '1 800', discountedPrice: '2 300', points: '90', description: 'Lorem Ipsum является стандартным видом текста.', image: '' },
+      { id: 1, name: 'Товар1', category: 'electronics', price: '2 300', discountedPrice: '2 300', points: '112', description: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.', image: 'https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png' },
+      { id: 2, name: 'Товар2', category: 'children', price: '1 500', discountedPrice: '2 300', points: '80', description: 'Lorem Ipsum является стандартным видом текста.', image: 'https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png' },
+      { id: 3, name: 'Товар3', category: 'books', price: '500', discountedPrice: '2 300', points: '20', description: 'Lorem Ipsum является стандартным видом текста.', image: 'https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png' },
+      { id: 4, name: 'Товар4', category: 'creativity', price: '700', discountedPrice: '2 300', points: '30', description: 'Lorem Ipsum является стандартным видом текста.', image: 'https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png' },
+      { id: 5, name: 'Товар5', category: 'home', price: '2 000', discountedPrice: '2 300', points: '100', description: 'Lorem Ipsum является стандартным видом текста.', image: 'https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png' },
+      { id: 6, name: 'Товар6', category: 'sports', price: '1 800', discountedPrice: '2 300', points: '90', description: 'Lorem Ipsum является стандартным видом текста.', image: 'https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png' },
     ]);
 
     const applyCategoryFilter = (category: string | null) => {
