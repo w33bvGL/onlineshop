@@ -40,7 +40,7 @@
     <div class="grid grid-cols-2 gap-3 mt-4 md:grid-cols-3 lg:grid-cols-4">
       <div class="flex flex-col justify-center items-center" v-for="product in filtered" :key="product.id">
         <div class="w-full aspect-1/3 bg-gray-100 rounded-2xl">
-          <img :src="product.image" alt="" class="w-full h-full object-cover rounded-2xl">
+          <img src="https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png" alt="" class="w-full h-full object-cover rounded-2xl">
         </div>
         <div class="text-center flex flex-col items-center ">
           <div class="text-4xl font-semibold mt-4 opacity-85">{{ product.price }} ₽</div>
