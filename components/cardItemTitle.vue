@@ -7,12 +7,12 @@
         </div>
         <div class="flex flex-row mt-7 ml-8 mb-7">
           <div class="flex flex-col gap-4">
-            <div class="card-item-images-blocks bg-gray-100 rounded-3xl"></div>
-            <div class="card-item-images-blocks bg-gray-100 rounded-3xl"></div>
-            <div class="card-item-images-blocks bg-gray-100 rounded-3xl"></div>
-            <div class="card-item-images-blocks bg-gray-100 rounded-3xl"></div>
+            <div class="card-item-images-blocks bg-gray-100 rounded-3xl"><img src="https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png"></div>
+            <div class="card-item-images-blocks bg-gray-100 rounded-3xl"><img src="https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png"></div>
+            <div class="card-item-images-blocks bg-gray-100 rounded-3xl"><img src="https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png"></div>
+            <div class="card-item-images-blocks bg-gray-100 rounded-3xl"><img src="https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png"></div>
           </div>
-          <div class="card-item-images-main-image h-full bg-gray-100 ml-4"><img src="" alt=""></div>
+          <div class="card-item-images-main-image h-full bg-gray-100 ml-4"><img src="https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png"></div>
           <div class="ml-4">
             <ul class="opacity-65 font-medium text-lg">
               <li>Тип:</li>
