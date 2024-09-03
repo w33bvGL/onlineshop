@@ -23,7 +23,7 @@
                   <input type="checkbox" class="cursor-pointer w-4 h-4 text-custom-green-1100 bg-gray-100
                     border-gray-300 rounded focus:custom-green-1100 ">
                 </div>
-                <div class="cabinet-item-image-container bg-gray-100 rounded-3xl"><img src="" alt="">
+                <div class="cabinet-item-image-container bg-gray-100 rounded-3xl"><img src="https://afriqueclair.com/wp-content/uploads/2020/09/1200x1486-5.png">
                 </div>
                 <div>
                   <div class="flex gap-2 items-center">
